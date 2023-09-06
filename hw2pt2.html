@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Part 2: Form</title>
+
+<script>
+function process() 
+{
+    var number1, number2, number3, n1, n2, n3, sum, average, product;
+
+    number1 = document.write.forms["myform"].elements["num1"].value;
+    number2 = document.write.forms["myform"].elements["num2"].value;
+    number3 = document.write.forms["myform"].elements["num3"].value;
+
+    n1 = parseInt(number1);
+    n2 = parseInt(number2);
+    n3 = parseInt(number3);
+
+    sum = n1 + n2 + n3;
+    average = sum / numbers.length;
+    product = n1 * n2 * n3;
+    
+
+    document.forms["myform"].elements["result"].value = sum, average, product;
+}
+</script>
+</head>
+<body>
+    <section>
+        <h1>Part 2: Form</h1>  
+        <form name="myform">
+            <table>
+                <tbody>
+                <tr>
+                    <td><label for="num1">First Number:</label></td>  
+                    <td><input type="number" id="num1" name="num1"></td>
+                </tr>    
+                <tr>  
+                    <td><label for="num2">Second Number:</label></td>
+                    <td><input type="number" id="num2" name="num2"></td>
+                </tr>  
+                <tr>      
+                    <td><label for="num3">Third Number:</label></td>
+                    <td><input type="number" id="num3" name="num3"></td>
+                </tr>
+                <tr>
+                    <td>Results:</td>
+                    <td><textarea name="result" cols="15" rows="5" readonly></textarea></td>
+                </tr>     
+                </tbody>
+            </table>
+                <input type="button" onclick="process()" value="SUBMIT">
+                <input type="reset" value="RESET">
+        </form>
+    </section> 
+</body>
+</html>
