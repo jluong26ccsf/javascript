@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Student Grades</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Homework 3 for JavaScript course">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        function process()
+        {
+        var hwAvg, midExam, finalExam, p, hwa, mexam, fexam, par, finalAvg;
+
+        hwAvg = document.getElementsById("hwag").value;
+        midExam = document.getElementsById("mex").value;
+        finalExam = document.getElementsById("fex").value;
+        p = document.getElementsById("part").value;
+
+        if (
+        isNaN(hwAvg) || isNaN(midExam) || isNaN(finalExam) || isNaN(p)
+        || hwAvg=="" || midExam=="" || finalExam=="" || p==""
+        || hwAvg > 100 || hwAvg < 0 || midExam > 100 || midExam < 0
+        || finalExam > 100 || finalExam < 0 || p > 100 || p < 0
+        )
+
+        hwa =  parseInt(hwAvg);
+        mexam =  parseInt(midExam);
+        fexam =  parseInt(finalExam);
+        par =  parseInt(p);
+
+        finalAvg = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.2 * p);
+
+        document.forms["myform"].elements["result"].value = finalAvg;
+        }
+    </script>
+    </head>
+<body>
+    <h1>Student Grades</h1>
+    <form name="myform">
+        <table>
+            <tbody>
+            <tr>
+                <td>Homework Average:</td>
+                <td><input type="number" name="hwag" id="hwag"></td>
+            </tr>
+            <tr>
+                <td>Mid-Term Exam Score:</td>
+                <td><input type="number" name="mex" id="mex"></td>
+            </tr>
+            <tr>
+                <td>Final Exam Score:</td>
+                <td><input type="number" name="fex" id="fex"></td>
+            </tr>
+            <tr>
+                <td>Participation:</td>
+                <td><input type="number" name="part" id="part"></td>
+            </tr>
+            <tr>
+                <td>Results</td>
+                <td><input type="text" name="result" id="result" readonly></td>
+            </tr>
+            </tbody>
+        </table>
+        <input type="button" onclick="process()" value="SUBMIT">
+        <input type="reset" onclick="reset()" value="RESET">
+    </form>
+    <div id="finalAvg"></div>
+    <br>
+    <footer>
+            <a href="https://jluong26ccsf.github.io/javascript/hw1.html"> Back to homepage </a>
+    </footer>
+</body>
+</html>

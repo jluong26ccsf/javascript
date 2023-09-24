@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Homework 3 - Part 2</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Homework 3 for JavaScript course">
+        <link rel="stylesheet" href="style.css" type="text/css">
+    <script>
+        function process()
+        {
+        var number1, number2, n1, n2, sum;
+
+        number1 = document.forms["myform"].elements["num1"].value;
+        number2 = document.forms["myform"].elements["num1"].value;
+
+        n1 =  parseInt(number1);
+        n2 =  parseInt(number1);
+
+        sum = n1 + n2;
+        }
+    </script>
+    </head>
+<body>
+    <h1>Student Grades</h1>
+    <form name="myform">
+        <table>
+            <tr>
+                <td><label for="num1">Name:</label></td>
+                <td><input type="text" size="0"></td>
+            </tr>
+            <tr>
+                <td><label for="num2">Item #1:</label></td>
+                <td><input type="number"  size="0"></td>
+            </tr>
+            <tr>
+                <td><label for="num3">Item #2:</label></td>
+                <td><input type="number" size="0"></td>
+            </tr>
+            <tr>
+                <td><label for="num3">Item #3:</label></td>
+                <td><input type="number" size="0"></td>
+            </tr>
+            <tr>
+                <td><label for="num3">Item #3:</label></td>
+                <td><input type="number" size="0"></td>
+            </tr>
+        </table>
+        <input type="button" onclick="process()" value="SUBMIT">
+        <input type="reset" onclick="res()" value="RESET">
+        <table style="width: 35%;">
+            <tr>
+                <th style="text-align: left;">Item #</th>
+                <th style="text-align: left;">Price</th>
+                <th style="text-align: left;">Quantity</th>
+                <th style="text-align: left;">Total</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>$10.00</td>
+                <th style="text-align: left;"><input type="text" readonly></th>
+                <th style="text-align: left;"><input type="text" readonly></th>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>$20.00</td>
+                <th style="text-align: left;"><input type="text" readonly></th>
+                <th style="text-align: left;"><input type="text" readonly></th>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>$30.00</td>
+                <th style="text-align: left;"><input type="text" readonly></th>
+                <th style="text-align: left;"><input type="text" readonly></th>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>$40.00</td>
+                <th style="text-align: left;"><input type="text" readonly></th>
+                <th style="text-align: left;"><input type="text" readonly></th>
+            </tr>
+        </table>
+    </form>
+    <div>
+        <div id="result"></div>
+    </div>
+    <footer>
+            <a href="https://jluong26ccsf.github.io/javascript/hw1.html"> Back to homepage </a></h3>
+    </footer>
+</body>
+</html>
