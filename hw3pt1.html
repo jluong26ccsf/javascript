@@ -8,21 +8,30 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
-        function process()
+        function getAverage()
         {
         var hwAvg, midExam, finalExam, p, hwa, mexam, fexam, par, finalAvg;
+
+        var errMsg="<span>Error</span>";
 
         hwAvg = document.getElementsById("hwag").value;
         midExam = document.getElementsById("mex").value;
         finalExam = document.getElementsById("fex").value;
         p = document.getElementsById("part").value;
 
-        if (
-        isNaN(hwAvg) || isNaN(midExam) || isNaN(finalExam) || isNaN(p)
+        if ( isNaN(hwAvg) || isNaN(midExam) || isNaN(finalExam) || isNaN(p)
+
         || hwAvg=="" || midExam=="" || finalExam=="" || p==""
+
         || hwAvg > 100 || hwAvg < 0 || midExam > 100 || midExam < 0
+
         || finalExam > 100 || finalExam < 0 || p > 100 || p < 0
         )
+        {
+            document.getElementById("errOut").innerHTML = errMsg;
+        }
+
+        else {
 
         hwa =  parseInt(hwAvg);
         mexam =  parseInt(midExam);
@@ -31,7 +40,18 @@
 
         finalAvg = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.2 * p);
 
-        document.forms["myform"].elements["result"].value = finalAvg;
+        switch(true) {
+            case(finalAvg >= 90):
+            document.getElementsById("results").innerHTML = ("Final Average is:" + Math.round(finalAvg) + "This is good")
+            break;
+        default:
+            document.getElementsById("results").innerHTML = ("Final Average is:" + Math.round(finalAvg) + "This is your grade")
+            }
+        }
+        function reset() {
+            document.getElementById("results").innerHTML = "";
+            document.getElementById("errOut").innerHTML = "";
+            }
         }
     </script>
     </head>
@@ -42,30 +62,33 @@
             <tbody>
             <tr>
                 <td>Homework Average:</td>
-                <td><input type="number" name="hwag" id="hwag"></td>
+                <td><input type="number" id="hwag"></td>
             </tr>
             <tr>
                 <td>Mid-Term Exam Score:</td>
-                <td><input type="number" name="mex" id="mex"></td>
+                <td><input type="number" id="mex"></td>
             </tr>
             <tr>
                 <td>Final Exam Score:</td>
-                <td><input type="number" name="fex" id="fex"></td>
+                <td><input type="number" id="fex"></td>
             </tr>
             <tr>
                 <td>Participation:</td>
-                <td><input type="number" name="part" id="part"></td>
-            </tr>
-            <tr>
-                <td>Results</td>
-                <td><input type="text" name="result" id="result" readonly></td>
+                <td><input type="number" id="part"></td>
             </tr>
             </tbody>
         </table>
-        <input type="button" onclick="process()" value="SUBMIT">
+        <input type="button" onclick="getAverage()" value="SUBMIT">
         <input type="reset" onclick="reset()" value="RESET">
     </form>
-    <div id="finalAvg"></div>
+
+    <div id="results">
+        <span>Final Average</span>
+    </div>
+    <div id="errOut">
+        <span>Error</span>
+    </div>
+
     <br>
     <footer>
             <a href="https://jluong26ccsf.github.io/javascript/hw1.html"> Back to homepage </a>
