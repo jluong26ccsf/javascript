@@ -6,6 +6,7 @@
         <title>Homework 4 - Part 2</title>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="/resources/demos/style.css">
+        <link rel="stylesheet" href="style.css" type="text/css">
 
         <style>
           table, th, td {
@@ -17,14 +18,6 @@
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
       </head>
-      <script>
-        <!--P = Prinical(initial amount borrowed or deposited)
-            r = annual rate of interest
-            n = number of years
-            A = amount of money gained after n years, plus interest-->
-            
-        var P, r, n, A
-      </script>
       <body>
         <h1>Looping Statements - Part 2</h1>
         <h2>Justin Luong</h2>
@@ -40,14 +33,13 @@
               <td>1</td>
               <td>
                 <script>
-                    var sum = 0; product = 1;
+                    var P, n, r, A = 0;
             
-                    for (var number = 5; number <= 25; number += 4)
+                    for (var n = 1; P = 1000, r = 0.05;);
                     {
-                        sum += number;
-                        product *= number;
+                        A = P * Math.pow(1 + r, n);
                     }
-                        document.write( + sum.toLocaleString() + " ");
+                        document.write( + A.toLocaleString() + " ");
                 </script>
               </td>
               <td>0.5</td>
@@ -58,12 +50,12 @@
                 <script>
                     var sum = 0; product = 1;
             
-                    for (var number = 5; number <= 25; number += 4)
+                    for (var P = 1000; r *= 0.05; n = 2)
                     {
                         sum += number;
                         product *= number;
                     }
-                        document.write( + sum.toLocaleString() + " ");
+                        document.write( + A.toLocaleString() + " ");
                 </script>
               </td>
               <td>0.5</td>
@@ -74,12 +66,12 @@
                 <script>
                     var sum = 0; product = 1;
             
-                    for (var number = 5; number <= 25; number += 4)
+                    for (var P = 1000; r *= 0.05; n = 3)
                     {
                         sum += number;
                         product *= number;
                     }
-                        document.write( + sum.toLocaleString() + " ");
+                        document.write( + A.toLocaleString() + " ");
                 </script>
               </td>
               <td>0.5</td>
@@ -90,12 +82,12 @@
                 <script>
                     var sum = 0; product = 1;
             
-                    for (var number = 5; number <= 25; number += 4)
+                    for (var P = 1000; r *= 0.05; n = 4)
                     {
                         sum += number;
                         product *= number;
                     }
-                        document.write( + sum.toLocaleString() + " ");
+                        document.write( + A.toLocaleString() + " ");
                 </script>
               </td>
               <td>0.5</td>
@@ -106,12 +98,12 @@
                 <script>
                     var sum = 0; product = 1;
             
-                    for (var number = 5; number <= 25; number += 4)
+                    for (var P = 1000; r *= 0.05; n = 5)
                     {
                         sum += number;
                         product *= number;
                     }
-                        document.write( + sum.toLocaleString() + " ");
+                        document.write( + A.toLocaleString() + " ");
                 </script>
               </td>
               <td>0.5</td>
@@ -132,12 +124,12 @@
                 <script>
                     var sum = 0; product = 1;
             
-                    for (var number = 5; number <= 25; number += 4)
+                    for (var P = 1000; r *= 0.06; n = 1)
                     {
                         sum += number;
                         product *= number;
                     }
-                        document.write( + sum.toLocaleString() + " ");
+                        document.write( + A.toLocaleString() + " ");
                 </script>
             </td>
             <td>0.6</td>
@@ -148,12 +140,12 @@
                 <script>
                     var sum = 0; product = 1;
             
-                    for (var number = 5; number <= 25; number += 4)
+                    for (var P = 1000; r *= 0.06; n = 2)
                     {
                         sum += number;
                         product *= number;
                     }
-                        document.write( + sum.toLocaleString() + " ");
+                        document.write( + A.toLocaleString() + " ");
                 </script>
             </td>
             <td>0.6</td>
@@ -164,12 +156,12 @@
                 <script>
                     var sum = 0; product = 1;
             
-                    for (var number = 5; number <= 25; number += 4)
+                    for (var P = 1000; r *= 0.06; n = 3)
                     {
                         sum += number;
                         product *= number;
                     }
-                        document.write( + sum.toLocaleString() + " ");
+                        document.write( + A.toLocaleString() + " ");
                 </script>
             </td>
             <td>0.6</td>
@@ -180,12 +172,12 @@
                 <script>
                     var sum = 0; product = 1;
             
-                    for (var number = 5; number <= 25; number += 4)
+                    for (var P = 1000; r *= 0.06; n = 4)
                     {
                         sum += number;
                         product *= number;
                     }
-                        document.write( + sum.toLocaleString() + " ");
+                        document.write( + A.toLocaleString() + " ");
                 </script>
             </td>
             <td>0.6</td>
@@ -196,12 +188,12 @@
               <script>
                   var sum = 0; product = 1;
           
-                  for (var number = 5; number <= 25; number += 4)
+                  for (var P = 1000; r *= 0.06; n = 5)
                   {
                       sum += number;
                       product *= number;
                   }
-                      document.write( + sum.toLocaleString() + " ");
+                      document.write( + A.toLocaleString() + " ");
               </script>
             </td>
             <td>0.6</td>
@@ -222,12 +214,12 @@
             <script>
                 var sum = 0; product = 1;
         
-                for (var number = 5; number <= 25; number += 4)
+                for (var P = 1000; r *= 0.07; n = 1)
                 {
                     sum += number;
                     product *= number;
                 }
-                    document.write( + sum.toLocaleString() + " ");
+                    document.write( + A.toLocaleString() + " ");
             </script>
           </td>
           <td>0.7</td>
@@ -238,12 +230,12 @@
             <script>
                 var sum = 0; product = 1;
         
-                for (var number = 5; number <= 25; number += 4)
+                for (var P = 1000; r *= 0.07; n = 2)
                 {
                     sum += number;
                     product *= number;
                 }
-                    document.write( + sum.toLocaleString() + " ");
+                    document.write( + A.toLocaleString() + " ");
             </script>
           </td>
           <td>0.7</td>
@@ -254,12 +246,12 @@
             <script>
                 var sum = 0; product = 1;
         
-                for (var number = 5; number <= 25; number += 4)
+                for (var P = 1000; r *= 0.07; n = 3)
                 {
                     sum += number;
                     product *= number;
                 }
-                    document.write( + sum.toLocaleString() + " ");
+                    document.write( + A.toLocaleString() + " ");
             </script>
           </td>
           <td>0.7</td>
@@ -270,12 +262,12 @@
             <script>
                 var sum = 0; product = 1;
         
-                for (var number = 5; number <= 25; number += 4)
+                for (var P = 1000; r *= 0.07; n = 4)
                 {
                     sum += number;
                     product *= number;
                 }
-                    document.write( + sum.toLocaleString() + " ");
+                    document.write( + A.toLocaleString() + " ");
             </script>
           </td>
           <td>0.7</td>
@@ -286,12 +278,12 @@
           <script>
               var sum = 0; product = 1;
       
-              for (var number = 5; number <= 25; number += 4)
+              for (P = 1000; r *= 0.07; n = 5)
               {
                   sum += number;
                   product *= number;
               }
-                  document.write( + sum.toLocaleString() + " ");
+                  document.write( + A.toLocaleString() + " ");
           </script>
         </td>
         <td>0.7</td>
