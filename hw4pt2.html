@@ -8,7 +8,9 @@
         <link rel="stylesheet" href="/resources/demos/style.css">
 
         <style>
-        #draggable { width: 150px; height: 150px; padding: 0.5em; }
+          table, th, td {
+            border: 1px solid black;
+          }
         </style>
         
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -16,33 +18,97 @@
 
       </head>
       <body>
-        <h1>Looping Statements - Part 1</h1>
+        <h1>Looping Statements - Part 2</h1>
         <h2>Justin Luong</h2>
         <hr>
         <h2>Part 2</h2>
+        <table style="width: 30%;">
+          <tr>
+              <th style="text-align: left;">Year</th>
+              <th style="text-align: left;">Deposit</th>
+              <th style="text-align: left;">Interest Rate</th>
+          </tr>
+          <tr>
+              <td>1</td>
+              <td>$10.00</td>
+              <td>0.5</td>
+          </tr>
+          <tr>
+              <td>2</td>
+              <td>$20.00</td>
+              <td>0.5</td>
+          </tr>
+          <tr>
+              <td>3</td>
+              <td>$30.00</td>
+              <td>0.5</td>
+          </tr>
+          <tr>
+              <td>4</td>
+              <td>$40.00</td>
+              <td>0.5</td>
+          </tr>
+      </table>
 
+      <br>
+
+      <table style="width: 30%;">
+        <tr>
+            <th style="text-align: left;">Year</th>
+            <th style="text-align: left;">Deposit</th>
+            <th style="text-align: left;">Interest Rate</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>$10.00</td>
+            <td>0.6</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>$20.00</td>
+            <td>0.6</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>$30.00</td>
+            <td>0.6</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>$40.00</td>
+            <td>0.6</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table style="width: 30%;">
+      <tr>
+          <th style="text-align: left;">Year</th>
+          <th style="text-align: left;">Deposit</th>
+          <th style="text-align: left;">Interest Rate</th>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>$10.00</td>
+          <td>0.7</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>$20.00</td>
+          <td>0.7</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>$30.00</td>
+          <td>0.7</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>$40.00</td>
+          <td>0.7</td>
+      </tr>
+  </table>
        
       </body>
       </html>
-
-      12   var y, x = 1, total = 0;
-13
-14   while ( x <= 10 ) {
-15       y = x * x;
-16       document.writeln( y + "<br>" );
-17       total += y;
-18       ++x;
-19    }
-20
-21   document.writeln( "<br>Total is " + total );
-
-var sum; product; x; sum = 0; product = 1; x = 1;
-
-while (x <= 18)
-{
-    sum += x;
-    product *= x;
-    x = x + 3;
-}
-    document.write("The sum of every 3th integer from 3 to 18 is " + sum.toLocaleString() + "<br><br>");
-    document.write("The product of every 3th integer from 3 to 18 is " + product.toLocaleString());
