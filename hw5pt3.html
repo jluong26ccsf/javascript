@@ -10,12 +10,6 @@
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
         <script>
-            function getStateInfo() {
-            document.getElementById("stateinfo").innerHTML = result;
-        }
-        </script>
-
-        <script>
             var stateArray = ["State Abbr", "Alabama", "Montgomery", "4,903,185"]
                              ["AL", "Alabama", "Montgomery", "4,903,185"]
                              ["AK", "Alaska", "Juneau", "731,545"]
@@ -23,6 +17,10 @@
                              ["AR", "Arkansas", "Little Rock", "7,278,717"]
                              ["CA", "California", "Sacremento", "39,512,223"]
                              ["CO", "Colorado", "Denver", "5,758,736"]
+
+            function getStateInfo() {
+                document.forms["StateForm"].elements["stateName"].value; = stateArray;
+            }
         </script>
 
         <style>
@@ -36,7 +34,7 @@
     <h1>Homework 5 Part 3</h1>
     <h2>Justin Luong</h2>
     <hr>
-    <h2>Please Fill Out This Form</h2>
+    <h2>Learn About State Names and Their Population</h2>
 
     <table>
         <tbody>
@@ -85,11 +83,9 @@
         </tbody>
     </table>
 
-    <form action=""></form>
-    <div>
-        <label for="state" class="label">Full Name of State or Abbreviation</label>
-        <input type="text"name="state" id="state">
-    </div>
+    <form name="StateForm" id="StateForm"></form>
+        <label for="state">Type Name of State or Abbreviation</label>
+        <input type="text" name="stateName" id="stateName">
 
     <input type="button" value="ENTER" onclick="getStateInfo()">
     <input type="button" value="RESET" onclick="window.location.reload();">
