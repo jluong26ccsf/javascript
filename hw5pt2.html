@@ -7,14 +7,14 @@
         <link rel="stylesheet" href="style.css" type="text/css">
 
         <script>
-            function fruitChoice() {
+            function fruitChoiceChange() {
             var x = document.getElementById("selectFruit").value;
             document.getElementById("fruitOnChange").innerHTML = "Your favorite fruit is " + x;
             }
         </script>
 
         <script>
-            function fruitChoice() {
+            function fruitChoiceClick() {
             document.getElementById("fruitOnClick").innerHTML = "So this is your favorite fruit?";
             }
         </script>
@@ -28,7 +28,7 @@
     <form>
         <h3>What is your favorite kind of fruit? (Using onchange)</h3>
         
-        <select name="selectFruit" onchange="fruitChoice()">
+        <select name="selectFruit" onchange="fruitChoiceChange()">
             <option value="Apple">Apple</option>
             <option value="Banana">Banana</option>
             <option value="Grapes">Grapes</option>
@@ -50,7 +50,7 @@
             <option value="Strawberry">Strawberry</option>
         </select>
 
-        <input type="button" value="Select" onclick="fruitChoice()">
+        <input type="button" value="Select" onclick="fruitChoiceClick()">
 
         <p name="fruitOnClick" id="fruitOnClick"></p>
     </form>
