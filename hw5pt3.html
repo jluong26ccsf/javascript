@@ -16,7 +16,8 @@
         </script>
 
         <script>
-            var stateArray = ["AL", "Alabama", "Montgomery", "4,903,185"]
+            var stateArray = ["State Abbr", "Alabama", "Montgomery", "4,903,185"]
+                             ["AL", "Alabama", "Montgomery", "4,903,185"]
                              ["AK", "Alaska", "Juneau", "731,545"]
                              ["AZ", "Arizona", "Phoenix", "7,278,717"]
                              ["AR", "Arkansas", "Little Rock", "7,278,717"]
@@ -39,6 +40,12 @@
 
     <table>
         <tbody>
+            <tr>
+                <td>State Abbreviation</td>
+                <td>State Name</td>
+                <td>Capital</td>
+                <td>Population</td>
+            </tr>
             <tr>
                 <td>AL</td>
                 <td>Alabama</td>
@@ -85,6 +92,7 @@
     </div>
 
     <input type="button" value="ENTER" onclick="getStateInfo()">
+    <input type="button" value="RESET" onclick="window.location.reload();">
 
     <p name="stateinfo" id="stateinfo"></p>
 
