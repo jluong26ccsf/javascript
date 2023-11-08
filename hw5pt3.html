@@ -5,12 +5,88 @@
         <meta charset="utf-8">
         <meta name="description" content="Homework 5 Part 3 for JavaScript course">
         <link rel="stylesheet" href="style.css" type="text/css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+        <script>
+            function getStateInfo() {
+            document.getElementById("stateinfo").innerHTML = result;
+        }
+        </script>
+
+        <script>
+            var stateArray = ["AL", "Alabama", "Montgomery", "4,903,185"]
+                             ["AK", "Alaska", "Juneau", "731,545"]
+                             ["AZ", "Arizona", "Phoenix", "7,278,717"]
+                             ["AR", "Arkansas", "Little Rock", "7,278,717"]
+                             ["CA", "California", "Sacremento", "39,512,223"]
+                             ["CO", "Colorado", "Denver", "5,758,736"]
+        </script>
+
+        <style>
+            table {
+                border-style: solid;
+            }
+        </style>
+
     </head>
 <body>
     <h1>Homework 5 Part 3</h1>
     <h2>Justin Luong</h2>
     <hr>
     <h2>Please Fill Out This Form</h2>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>AL</td>
+                <td>Alabama</td>
+                <td>Montgomery</td>
+                <td>4,903,185</td>
+            </tr>
+            <tr>
+                <td>AK</td>
+                <td>Alaska</td>
+                <td>Juneau</td>
+                <td>731,545</td>
+            </tr>
+            <tr>
+                <td>AZ</td>
+                <td>Arizona</td>
+                <td>Phoenix</td>
+                <td>7,278,717</td>
+            </tr>
+            <tr>
+                <td>AR</td>
+                <td>Arkansas</td>
+                <td>Little Rock</td>
+                <td>3,017,825</td>
+            </tr>
+            <tr>
+                <td>CA</td>
+                <td>California</td>
+                <td>Sacremento</td>
+                <td>39,512,223</td>
+            </tr>
+            <tr>
+                <td>CO</td>
+                <td>Colorado</td>
+                <td>Denver</td>
+                <td>5,758,736</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form action=""></form>
+    <div>
+        <label for="state" class="label">Full Name of State or Abbreviation</label>
+        <input type="text"name="state" id="state">
+    </div>
+
+    <input type="button" value="ENTER" onclick="getStateInfo()">
+
+    <p name="stateinfo" id="stateinfo"></p>
 
     <footer>
         <p><a href="https://jluong26ccsf.github.io/javascript/hw5.html"> Back to Homework 5 homepage </a></p>
