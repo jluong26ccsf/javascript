@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Homework 5 Arrays Part 1 - JavaScript</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Homework 5 Part 1 for JavaScript course">
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    </head>
+<body>
+    <h1>Homework 5 Part 1</h1>
+    <h2>Justin Luong</h2>
+    <hr>
+    <h2>Please Fill Out This Form</h2>
+    <table>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+
+    <script>
+        function process() 
+        {
+            var number1, number2, number3, n1, n2, n3, sum, average, product;
+        
+            number1 = document.write.forms["myform"].elements["num1"].value;
+            number2 = document.write.forms["myform"].elements["num2"].value;
+            number3 = document.write.forms["myform"].elements["num3"].value;
+        
+            n1 = parseInt(number1);
+            n2 = parseInt(number2);
+            n3 = parseInt(number3);
+        
+            sum = n1 + n2 + n3;
+            average = sum / numbers.length;
+            product = n1 * n2 * n3;
+            
+        
+            document.forms["myform"].elements["result"].value = sum, average, product;
+        }
+        </script>
+
+    <form name="myform">
+        <table>
+            <tbody>
+            <tr>
+                <td><label for="num1">less than 21:</label></td>  
+                <td><input type="text" id="num1" name="num1"></td>
+            </tr>    
+            <tr>  
+                <td><label for="num2">between 21 and 50:</label></td>
+                <td><input type="text" id="num2" name="num2"></td>
+            </tr>  
+            <tr>      
+                <td><label for="num3">older tahn 50:</label></td>
+                <td><input type="text" id="num3" name="num3"></td>
+            </tr>
+            <tr>
+                <td>Results:</td>
+                <td><textarea name="result" cols="15" rows="5" readonly></textarea></td>
+            </tr>     
+            </tbody>
+        </table>
+            <input type="button" onclick="process()" value="SUBMIT">
+            <input type="reset" value="RESET">
+    </form>
+
+    <script>
+        var highestNumber = w[ 0 ], lowestNumber = w[ 0 ];
+
+    for ( var i = 1; i < 99; i++ ) {
+    if ( w[ i ] > highestNumber )
+    highestNumber = parseFloat( w[ i ] );
+    if ( w[ i ] < lowestNumber )
+    lowestNumber = parseFloat( w[ i ] );
+    }
+
+    document.writeln( highestNumber + " " + lowestNumber);
+
+    </script>
+
+    <footer>
+        <p><a href="https://jluong26ccsf.github.io/javascript/hw1.html"> Back to homepage </a></h3></p>
+    </footer>
+</body>
+</html>

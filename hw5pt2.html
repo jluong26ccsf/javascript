@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Homework 5 Arrays Part 2 - JavaScript</title>
+        <meta charset="utf-8">
+        <meta name="description" content="learning to create pulldown menus">
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+        <script>
+            function fruitChoice() {
+            var x = document.getElementById("selectFruit").value;
+            document.getElementById("fruitOnChange").innerHTML = "Your favorite fruit is " + x;
+            }
+        </script>
+
+        <script>
+            function fruitChoice() {
+            document.getElementById("fruitOnClick").innerHTML = "So this is your favorite fruit?";
+            }
+        </script>
+
+    </head>
+<body>
+    <h1>Homework 5 Part 2</h1>
+    <h2>Justin Luong</h2>
+    <hr>
+    <h2>Pull Down Menus</h2>
+    <form>
+        <h3>What is your favorite kind of fruit? (Using onchange)</h3>
+        
+        <select name="selectFruit" onchange="fruitChoice()">
+            <option value="Apple">Apple</option>
+            <option value="Banana">Banana</option>
+            <option value="Grapes">Grapes</option>
+            <option value="Orange">Orange</option>
+            <option value="Strawberry">Strawberry</option>
+        </select>
+
+        <p name="fruitOnChange" id="fruitOnChange"></p>
+    </form>
+
+    <form>
+        <h3>What is your favorite kind of fruit? (Using onclick)</h3>
+        
+        <select name="selectFruit">
+            <option value="Apple">Apple</option>
+            <option value="Banana">Banana</option>
+            <option value="Grapes">Grapes</option>
+            <option value="Orange">Orange</option>
+            <option value="Strawberry">Strawberry</option>
+        </select>
+
+        <input type="button" value="Select" onclick="fruitChoice()">
+
+        <p name="fruitOnClick" id="fruitOnClick"></p>
+    </form>
+    
+    <footer>
+        <p><a href="https://jluong26ccsf.github.io/javascript/hw1.html"> Back to homepage </a></h3></p>
+</footer>
+</body>
+</html>
